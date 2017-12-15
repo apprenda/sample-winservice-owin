@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<appManifest xmlns="http://schemas.apprenda.com/DeploymentManifest"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://schemas.apprenda.com/DeploymentManifest 
+             http://apprenda.com/schemas/platform/8.0/DeploymentManifest.xsd">
+
+  <!--Required: service name, nameOfExecutable-->
+  <windowsServices>
+    <service name="Apprenda.Sample.OWIN" requires32Bit="false" nameOfExecutable="Apprenda.Sample.OWIN.exe"
+             instanceCount="1" scalingType="Manual">
+      <ports>
+        <dynamicPort portName="HTTP" httpMapped="true"/>
+      </ports>
+    </service>
+  </windowsServices>
+  <presentation strategy="CommingledAppRoot" />
+</appManifest>
+
+
